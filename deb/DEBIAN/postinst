@@ -1,2 +1,2 @@
 #!/bin/bash
-ln -s /opt/xamarin.android/bin/Release/bin/xabuild /usr/bin/xabuild
+ln -s /opt/xamarin.android/tools/scripts/xabuild /usr/bin/xabuild

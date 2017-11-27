@@ -1,0 +1,11 @@
+--- xamarin-android/Configuration.props	2017-11-27 10:40:41.137198941 -0500
++++ xamarin-android/Configuration.props2	2017-11-27 14:34:15.341708645 -0500
+@@ -42,7 +42,7 @@
+     <AndroidPlatformId Condition=" '$(AndroidPlatformId)' == '' ">$(AndroidApiLevel)</AndroidPlatformId>
+     <AndroidPreviousFrameworkVersion Condition=" '$(AndroidPreviousFrameworkVersion)' == '' ">v1.0</AndroidPreviousFrameworkVersion>
+     <AndroidToolchainCacheDirectory Condition=" '$(AndroidToolchainCacheDirectory)' == '' ">$(HOME)\android-archives</AndroidToolchainCacheDirectory>
+-    <AndroidToolchainDirectory Condition=" '$(AndroidToolchainDirectory)' == '' ">$(HOME)\android-toolchain</AndroidToolchainDirectory>
++    <AndroidToolchainDirectory Condition=" '$(AndroidToolchainDirectory)' == '' ">\opt\android-toolchain</AndroidToolchainDirectory>
+     <AndroidMxeInstallPrefix Condition=" '$(AndroidMxeInstallPrefix)' == '' And '$(NeedMxe)' == 'true' ">$(AndroidToolchainDirectory)\mxe-a926b16</AndroidMxeInstallPrefix>
+     <AndroidMxeInstallPrefix Condition=" '$(HostOS)' == 'Linux' ">\usr</AndroidMxeInstallPrefix>
+     <AndroidSdkDirectory Condition=" '$(AndroidSdkDirectory)' == '' ">$(AndroidToolchainDirectory)\sdk</AndroidSdkDirectory>
