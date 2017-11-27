@@ -22,6 +22,7 @@ package:
 prepare:
 	#get the submodule
 	git submodule init
+	git submodule update
 	#install other dependencies
 	sudo apt install mono-csharp-shell mono-complete nuget openjdk-8-jdk unzip zlib1g-dev dirmngr
 	#add the mono alpha repository
