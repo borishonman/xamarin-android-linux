@@ -23,6 +23,9 @@ prepare:
 	#get the submodule
 	git submodule init
 	git submodule update
+	#get java.interop - at the time of writing this fails to clone when
+	#xamarin-android is run with make prepare
+	git clone https://github.com/xamarin/java.interop.git xamarin-android/external/Java.Interop
 	#install other dependencies
 	sudo apt install mono-csharp-shell mono-complete nuget openjdk-8-jdk unzip zlib1g-dev dirmngr
 	#add the mono alpha repository
