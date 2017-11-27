@@ -1,13 +1,19 @@
+PKG := xamarin-android.deb
+
 all:
 	make -C xamarin-android prepare
 	make -C xamarin-android jenkins
 	rm -r xamarin-android/external xamarin-android/samples xamarin-android/tests xamarin-android/tools xamarin-android/bin/Debug
 
+.SILENT:
 package:
+	echo "Copying build files to package dir..."
+	rm -rf deb/opt
 	mkdir -p deb/opt/xamarin.android
 	cp -r xamarin-android/* deb/opt/xamarin.android
+	echo "Building package $(PKG)..."
 	dpkg-deb --build deb
-	mv deb.deb xamarin-android.deb
+	mv deb.deb $(PKG)
 
 prepare:
 	#get the submodule
