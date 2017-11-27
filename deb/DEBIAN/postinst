@@ -1,2 +1,2 @@
 #!/bin/bash
-source /etc/profile.d/99-xamarin-android.sh
+ln -s /opt/xamarin.android/bin/Release/bin/xabuild /usr/bin/xabuild
