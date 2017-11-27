@@ -5,9 +5,9 @@ all:
 	make -C xamarin-android jenkins
 	rm -r xamarin-android/external xamarin-android/samples xamarin-android/tests xamarin-android/tools xamarin-android/bin/Debug
 	#patch xabuild
-	patch xamarin-android/tools/scripts/xabuild xabuild.patch
+	patch --silent xamarin-android/tools/scripts/xabuild xabuild.patch
 	#patch Configuration.props
-	patch xamarin-android/Configuration.props config.props.patch
+	patch --silent xamarin-android/Configuration.props config.props.patch
 
 .SILENT:
 package:
