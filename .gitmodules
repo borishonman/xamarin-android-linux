@@ -1,0 +1,3 @@
+[submodule "xamarin-android"]
+	path = xamarin-android
+	url = https://github.com/xamarin/xamarin-android.git
