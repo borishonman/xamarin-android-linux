@@ -1,6 +1,13 @@
 all:
 	make -C xamarin-android prepare
 	make -C xamarin-android jenkins
+	rm -r xamarin-android/external xamarin-android/samples xamarin-android/tests xamarin-android/tools xamarin-android/bin/Debug
+
+package:
+	mkdir -p deb/opt/xamarin.android
+	cp -r xamarin-android/* deb/opt/xamarin.android
+	dpkg-deb --build deb
+	mv deb.deb xamarin-android.deb
 
 prepare:
 	#get the submodule

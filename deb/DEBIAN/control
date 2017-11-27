@@ -1,0 +1,6 @@
+Package: xamarin-android
+Version: 1.0
+Architecture: all
+Depends: mono-csharp-shell (>=5.8.0.22), mono-complete (>=5.8.0.22), nuget (>=2.12), openjdk-8-jdk (>=8u151), zlib1g-dev (>1:1.2.8.dfsg)
+Maintainer: Justin Byers <justin@animiku.com>
+Description: Xamarin.Android build system for building Android apps on linux using Xamarin
