@@ -22,3 +22,6 @@ This project contains scripts, patches, and documentation on how to set up a Xam
 6. Install the package
 `sudo dpkg -i xamarin-android.deb`
 
+## Ubuntu preparation steps
+
+Follow debian steps but skip steps 1 & 2
