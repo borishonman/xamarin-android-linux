@@ -1,11 +1,9 @@
 PKG := xamarin-android.deb
 
 all:
-	cd xamarin-android
-	make prepare
-	make jenkins
-	rm -r external samples tests tools bin/Debug
-	cd ..
+	cd xamarin-android && make prepare
+	cd xamarin-android && make jenkins
+	cd xamarin-android && rm -r external samples tests tools bin/Debug
 	#patch xabuild
 	patch --silent xamarin-android/tools/scripts/xabuild xabuild.patch
 	#patch Configuration.props
